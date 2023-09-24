@@ -11,7 +11,7 @@ export default function PrivateRoute() {
   useEffect(() => {
     const authCheck = async () => {
       const res = await axios.get(
-        "http://localhost:8080/api/v1/auth/admin-auth"
+        "https://ecommerceapplication-s09v.onrender.com/api/v1/auth/admin-auth"
       );
       if (res.data.ok) {
         setOk(true);
