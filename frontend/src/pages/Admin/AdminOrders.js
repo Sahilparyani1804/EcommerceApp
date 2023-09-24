@@ -22,7 +22,7 @@ const AdminOrders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/auth/all-orders"
+        "https://ecommerceapplication-s09v.onrender.com/api/v1/auth/all-orders"
       );
       setOrders(data);
     } catch (error) {
@@ -37,7 +37,7 @@ const AdminOrders = () => {
   const handleChange = async (orderId, value) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/auth/order-status/${orderId}`,
+        `https://ecommerceapplication-s09v.onrender.com/api/v1/auth/order-status/${orderId}`,
         {
           status: value,
         }
@@ -97,7 +97,7 @@ const AdminOrders = () => {
                     <div className="row mb-2 p-3 card flex-row" key={p._id}>
                       <div className="col-md-4">
                         <img
-                          src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                          src={`https://ecommerceapplication-s09v.onrender.com/api/v1/product/product-photo/${p._id}`}
                           className="card-img-top"
                           alt={p.name}
                           width="100px"
